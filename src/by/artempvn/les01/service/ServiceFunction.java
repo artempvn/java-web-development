@@ -2,16 +2,17 @@ package by.artempvn.les01.service;
 
 import by.artempvn.les01.exception.CustomException;
 import by.artempvn.les01.validator.CheckValue;
+import static java.lang.Math.*;
 
 public class ServiceFunction {
 	private static final String EXCEPTION_MESSAGE = "Incorrect input";
 
 	public double calculateFunctionTask8_1(double x) {
-		return (-(Math.pow(x, 2)) + 3 * x + 9);
+		return (-(pow(x, 2)) + 3 * x + 9);
 	}
 
 	public double calculateFunctionTask8_2(double x) {
-		return (1 / (Math.pow(x, 3) - 6));
+		return (1 / (pow(x, 3) - 6));
 	}
 
 	public double calculateFunctionTask8(double x) {
@@ -22,7 +23,7 @@ public class ServiceFunction {
 	}
 
 	public double calculateFunctionTask10(double x) {
-		return (Math.tan(x));
+		return (tan(x));
 	}
 
 	public double[][] calculateFunctionTask10Interval(double start, double end,

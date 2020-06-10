@@ -14,8 +14,8 @@ public class CheckValue {
 	}
 
 	public boolean checkSquare(double outerSquare, double innerSquare) {
-		return (outerSquare > innerSquare && outerSquare != 0
-				&& innerSquare != 0);
+		return (outerSquare > innerSquare && outerSquare > 0
+				&& innerSquare > 0);
 	}
 
 	public boolean checkTimeSeconds(int seconds) {
@@ -23,7 +23,7 @@ public class CheckValue {
 	}
 
 	public boolean checkInterval(double start, double end, double step) {
-		return (end > start && step < end - start);
+		return (end > start && step < end - start && step > 0);
 	}
 
 }

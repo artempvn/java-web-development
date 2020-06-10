@@ -16,9 +16,9 @@ public class ParserNumber {
 	private static final String EXCEPTION_MESSAGE = "Incorrect input";
 
 	private CheckType check = new CheckType();
-	private String parsedString;
 
 	public String findInt(String input) {
+		String parsedString="";
 		Pattern patternInt = Pattern.compile(PATTERN_INT);
 		Matcher matcherInt = patternInt.matcher(input);
 		if (matcherInt.find()) {
@@ -29,6 +29,7 @@ public class ParserNumber {
 	}
 
 	public String findLong(String input) {
+		String parsedString="";
 		Pattern patternLong = Pattern.compile(PATTERN_LONG);
 		Matcher matcherLong = patternLong.matcher(input);
 		if (matcherLong.find()) {
@@ -39,6 +40,7 @@ public class ParserNumber {
 	}
 
 	public String findDouble(String input) {
+		String parsedString="";
 		Pattern patternDouble = Pattern.compile(PATTERN_DOUBLE);
 		Matcher matcherDouble = patternDouble.matcher(input);
 		if (matcherDouble.find()) {
