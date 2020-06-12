@@ -5,7 +5,6 @@ import by.artempvn.les01.validator.CheckValue;
 
 public class ServiceSquareCircle {
 	private static final String EXCEPTION_MESSAGE = "Incorrect input";
-	private CheckValue checkValue = new CheckValue();
 
 	public double calculateSideBySquare(double square) throws CustomException {
 		if (square <= 0) {

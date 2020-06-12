@@ -15,8 +15,6 @@ public class ParserNumber {
 	private static final String DELIMITER_INCORRECT = ",";
 	private static final String EXCEPTION_MESSAGE = "Incorrect input";
 
-	private CheckType check = new CheckType();
-
 	public String findInt(String input) {
 		String parsedString="";
 		Pattern patternInt = Pattern.compile(PATTERN_INT);
@@ -56,6 +54,7 @@ public class ParserNumber {
 
 	public int stringToInt(String input) throws CustomException {
 		int stringToInt = 0;
+		CheckType check = new CheckType();
 		if (check.isInt(input)) {
 			stringToInt = Integer.parseInt(input);
 		} else {
@@ -66,6 +65,7 @@ public class ParserNumber {
 
 	public long stringToLong(String input) throws CustomException {
 		long stringToLong = 0;
+		CheckType check = new CheckType();
 		if (check.isLong(input)) {
 			stringToLong = Long.parseLong(input);
 		} else {
@@ -76,6 +76,7 @@ public class ParserNumber {
 
 	public double stringToDouble(String input) throws CustomException {
 		double stringToDouble = 0;
+		CheckType check = new CheckType();
 		if (check.isDouble(input)) {
 			stringToDouble = Double.parseDouble(input);
 		} else {

@@ -32,6 +32,7 @@ public class Point2D {
 		this.coordinateX = coordinateX;
 		this.coordinateY = coordinateY;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

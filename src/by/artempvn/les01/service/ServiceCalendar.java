@@ -9,9 +9,9 @@ public class ServiceCalendar {
 	public static final int LEAP_YEAR_100 = 100;
 	public static final int LEAP_YEAR_400 = 400;
 	private static final String EXCEPTION_MESSAGE = "Incorrect input";
-	private CheckValue checkMonthYear = new CheckValue();
 
 	public boolean isLeapYear(int year) throws CustomException {
+		CheckValue checkMonthYear = new CheckValue();
 		if (!checkMonthYear.checkYear(year)) {
 			throw new CustomException(EXCEPTION_MESSAGE);
 		}
@@ -21,6 +21,7 @@ public class ServiceCalendar {
 
 	public int findOutNumberOfDays(int month, int year) 
 			throws CustomException {
+		CheckValue checkMonthYear = new CheckValue();
 		if (!checkMonthYear.checkMonth(month)
 				|| !checkMonthYear.checkYear(year)) {
 			throw new CustomException(EXCEPTION_MESSAGE);

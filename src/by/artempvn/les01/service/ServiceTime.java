@@ -8,10 +8,9 @@ public class ServiceTime {
 	private static final int SECONDS_IN_MINUTE = 60;
 	private static final int SECONDS_IN_HOUR = 3600;
 
-	private CheckValue checkValue = new CheckValue();
-
 	public int[] convertSecondsToHms(int timeInSeconds) 
 			throws CustomException {
+		CheckValue checkValue = new CheckValue();
 		if (!checkValue.checkTimeSeconds(timeInSeconds)) {
 			throw new CustomException(EXCEPTION_MESSAGE);
 		}
